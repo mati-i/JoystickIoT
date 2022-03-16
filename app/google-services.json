@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "894927579676",
+    "firebase_url": "https://iot-db-project-default-rtdb.firebaseio.com",
+    "project_id": "iot-db-project",
+    "storage_bucket": "iot-db-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894927579676:android:e018df74a48ca63c5d0dd9",
+        "android_client_info": {
+          "package_name": "com.mllanquiman.joystickiot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894927579676-imlhaqispasdjsuul6njfql34asatuek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcjzfzeZwRJA-V4_QQOJazFmse7TsNY34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894927579676-imlhaqispasdjsuul6njfql34asatuek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

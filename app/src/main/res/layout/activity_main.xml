@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/gradient_color"
+    tools:context=".MainActivity">
+
+    <com.example.joystickjhr.JoystickJhr
+        android:id="@+id/joystickJhr"
+        android:layout_width="158dp"
+        android:layout_height="144dp"
+        android:layout_gravity="bottom"
+
+        app:alphaCircleFirst="120"
+        app:alphaCircleSecond="150"
+        app:colorFirst="#44000000"
+        app:colorSecond="#7CEFC862"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82"
+        app:radioCircle="0.4"
+        app:relleno="true"
+        app:rellenoSize="8"
+        app:textSizeJoy="40"
+        app:xtextOffset="-38"
+        app:ytextOffset="-15">
+
+    </com.example.joystickjhr.JoystickJhr>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="308dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/distanciaX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distancia X = "
+            android:textColor="#9F9F9F" />
+
+        <TextView
+            android:id="@+id/distanciaY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distancia Y = "
+            android:textColor="#9F9F9F" />
+
+        <TextView
+            android:id="@+id/angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angulo  ="
+            android:textColor="#9F9F9F" />
+
+        <TextView
+            android:id="@+id/distancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distancia ="
+            android:textColor="#9F9F9F" />
+
+        <TextView
+            android:id="@+id/dirKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección ="
+            android:textColor="#9F9F9F" />
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/btn_up_velocity"
+        android:layout_width="54dp"
+        android:layout_height="53dp"
+        android:background="@drawable/round_button"
+        android:onClick="levelSpeedUp"
+        android:text="⋙"
+        android:textColor="#9F9F9F"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@+id/joystickJhr"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <Button
+        android:id="@+id/btn_down_velocity"
+        android:layout_width="54dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/round_button"
+        android:text="⋘"
+        android:textColor="#9F9F9F"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        android:onClick="levelSpeedDown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.734" />
+
+    <com.github.angads25.toggle.widget.LabeledSwitch
+        android:id="@+id/btn_switch"
+        android:layout_width="52dp"
+        android:layout_height="21dp"
+        android:textSize="14sp"
+        app:colorBorder="#9F9F9F"
+        app:colorOff="#302F2F"
+        app:colorOn="#7CEFC862"
+        app:layout_constraintBottom_toTopOf="@+id/btn_up_velocity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        app:on="false" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="108dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="216dp"
+        android:indeterminateOnly="false"
+        android:progress="0"
+        android:progressDrawable="@drawable/circle_progress_2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_semi_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.030"
+        app:layout_constraintStart_toEndOf="@+id/joystickJhr"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <TextView
+        android:id="@+id/txt_progre_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#EFC862"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar2"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/progressBar2"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <ImageView
+        android:id="@+id/img_semi_circle"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.120"
+        app:srcCompat="@drawable/semi_circle_pb" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="251dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="172dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circle_progress_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_up_velocity"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toEndOf="@+id/joystickJhr"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0"
+        tools:progress="50" />
+
+    <TextView
+        android:id="@+id/txt_progre_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textColor="#EFC862"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_semi_circle"
+        app:layout_constraintEnd_toEndOf="@+id/img_semi_circle"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="@+id/img_semi_circle"
+        app:layout_constraintTop_toTopOf="@+id/img_semi_circle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate android:fromDegrees="180" android:toDegrees="180" >
+
+            <shape android:shape="ring" android:thicknessRatio="25" android:useLevel="true"
+                >
+                <gradient
+                    android:startColor="#FF0000"
+                    android:centerColor="#EFC862"
+
+                />
+
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
